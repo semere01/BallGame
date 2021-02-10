@@ -1,0 +1,55 @@
+.main-title{
+	text-align: center;
+	margin-top:10%;
+}
+.game-title{
+	text-align: center;
+	margin-top:5%;
+}
+body, html {
+	overflow-y: hidden;
+  height: 100%;
+  margin: 0;
+}
+.main{
+  background-image: url('../img/bg1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+canvas{
+	background: #eee;
+	display:block;
+	margin:0 auto;
+	background-color: purple;
+}
+.instructions{
+	background-color: rgb(101,46,101);
+	border-radius: 10%;
+	color:rgb(230,230,230);
+
+}
+.btn{
+
+	color:rgb(230,230,230);
+	background-color: rgb(101,46,101);
+}
+#start-game-btn{
+}
+.active{
+	padding-left: 2rem;
+}
+
+}
+/*body{
+  height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+  background-size: cover;
+	  /* The image used */
+
+  /* Full height */
+
+  /* Center and scale the image nicely */
+/*  background-position: center;
+ 

@@ -25,7 +25,9 @@ class Paddle{
 	drawScore(){
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0095DD";
-    ctx.fillText("Score: "+mStorage.getItem("ai-score"), 8, 20);
+    if (mStorage.getItem("ai-score")) var s = mStorage.getItem("ai-score");
+    else var s = 0;
+    ctx.fillText("Score: "+s, 8, 20);
 	}
 
 	drawPaddle(){
@@ -108,7 +110,7 @@ function draw(){
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-document.getElementById("help").addEventListener("click", helper)
+// document.getElementById("help").addEventListener("click", helper)
 function keyDownHandler(e){
 	if(e.key == "ArrowDown"){
 		upPressed = true;
@@ -125,9 +127,9 @@ function keyUpHandler(e){
 		downPressed = false;
 	}
 }
-function helper(e){
-	document.getElementById("help-body").innerHTML = "Use the up and down arrow keys to control the left panel and keep the ball from entering the left side of the canvas."
-}
+// function helper(e){
+// 	document.getElementById("help-body").innerHTML = "Use the up and down arrow keys to control the left panel and keep the ball from entering the left side of the canvas."
+// }
 
 
 
