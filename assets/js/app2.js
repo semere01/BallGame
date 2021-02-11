@@ -126,10 +126,25 @@ function keyUpHandler(e){
 	else if (e.key == "ArrowUp"){
 		downPressed = false;
 	}
+	else if (e.key == "Escape"){
+		if (confirm("Game paused. Return to game?")){
+			null;
+		} else {
+			window.close();
+		}
+	}
 }
 // function helper(e){
 // 	document.getElementById("help-body").innerHTML = "Use the up and down arrow keys to control the left panel and keep the ball from entering the left side of the canvas."
 // }
+document.getElementById("reset-btn").addEventListener("click", resetScore);
+
+function resetScore(){
+	if (confirm("Are you sure you want to reset your score?")){
+		mStorage.clear();
+		location.reload();
+	}
+}
 
 
 
